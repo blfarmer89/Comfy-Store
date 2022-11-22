@@ -13,7 +13,7 @@ const setupSearch = (store) => {
           return product;
         }
       });
-      display(newStore, getElement('.products-container'));
+      display(newStore, getElement('.products-container'), true);
       if (newStore.length < 1) {
         const products = getElement('.products-container');
         products.innerHTML = `
@@ -22,7 +22,7 @@ const setupSearch = (store) => {
         </h3>`;
       }
     } else {
-      display(store, getElement('.products-container'));
+      display(store, getElement('.products-container'), true);
     }
   });
 };
